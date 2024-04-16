@@ -1,22 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Hola mundo desde el titulo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .calculator {
+      width: 250px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    input[type="text"] {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 18px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    input[type="button"] {
+      width: 48%;
+      padding: 10px;
+      font-size: 18px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    input[type="button"]:hover {
+      background-color: #ccc;
+    }
+    .result {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-	<h1>Hola Mundo</h1>
-	<br />
-	<h1>HTML Hypertext Markup Language</h1>
-	<h2>Elementos</h2>
-		<ul>
-			<li>Etiquetas que abren y cierran &lt foo &gt &lt /foo &gt </li>
-			<li>Tienen atributos: &lt img src="imagen.jpg"&gt &lt /img &gt </li>
-		</ul>	
-	<h2>Entidades</h2>
-		<ul>
-			<li>Esto es un ampersand &amp </li>
-			<li>Esto es un underbraket &lt </li>
-			<li>Esto es un otrobraket &gt </li>
-		</ul>
+  <div class="calculator">
+    <input type="text" id="input1" placeholder="Enter number">
+    <input type="text" id="input2" placeholder="Enter number">
+    <div>
+      <input type="button" value="+" onclick="add()">
+      <input type="button" value="-" onclick="subtract()">
+      <input type="button" value="*" onclick="multiply()">
+      <input type="button" value="/" onclick="divide()">
+    </div>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function add() {
+      var num1 = parseFloat(document.getElementById('input1').value);
+      var num2 = parseFloat(document.getElementById('input2').value);
+      document.getElementById('result').innerHTML = num1 + num2;
+    }
+
+    function subtract() {
+      var num1 = parseFloat(document.getElementById('input1').value);
+      var num2 = parseFloat(document.getElementById('input2').value);
+      document.getElementById('result').innerHTML = num1 - num2;
+    }
+
+    function multiply() {
+      var num1 = parseFloat(document.getElementById('input1').value);
+      var num2 = parseFloat(document.getElementById('input2').value);
+      document.getElementById('result').innerHTML = num1 * num2;
+    }
+
+    function divide() {
+      var num1 = parseFloat(document.getElementById('input1').value);
+      var num2 = parseFloat(document.getElementById('input2').value);
+      if (num2 === 0) {
+        document.getElementById('result').innerHTML = "Error: Cannot divide by zero";
+      } else {
+        document.getElementById('result').innerHTML = num1 / num2;
+      }
+    }
+  </script>
 </body>
 </html>
