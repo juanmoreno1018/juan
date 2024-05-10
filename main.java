@@ -1,3 +1,4 @@
+
 // Definición de la clase abstracta Vehiculo
 abstract class Vehiculo {
     // Método abstracto para acelerar (debe ser implementado por las clases hijas)
