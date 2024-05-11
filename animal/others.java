@@ -1,6 +1,6 @@
 package animal;
 
-
+//Definición de la clase Animal
 class Animal {
     // Método para hacer sonido genérico
     void hacerSonido() {

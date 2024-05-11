@@ -1,8 +1,7 @@
-import java.util.Scanner;
 
 public class empresa_robotic_sin_teclado {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        
         System.out.println("bienvenido a robotic:");
 
         String nombre = "Miguel Espitia";
