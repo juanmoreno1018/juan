@@ -27,7 +27,7 @@ class Gato extends Animal {
 }
 
 // Clase principal Main
-public class others {
+public class AnimalesDomesticos {
     public static void main(String[] args) {
         // Crear instancia de Perro y asignarla a una referencia de tipo Animal
         Animal animal1 = new Perro();
